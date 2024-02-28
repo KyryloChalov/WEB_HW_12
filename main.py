@@ -11,8 +11,8 @@ async def root():
     return {"message": "Welcome! This is Homework 12"}
 
 
-app.include_router(contacts.router, prefix="/api")
 app.include_router(auth.router, prefix='/api')
+app.include_router(contacts.router, prefix="/api")
 app.include_router(db.router, prefix="")
 app.include_router(seed.router, prefix="")
 
